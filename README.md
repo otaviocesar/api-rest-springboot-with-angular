@@ -14,9 +14,9 @@ mvn clean install package
 * A arquitetura da API é dividida nas seguintes camadas:
 
 ```
-@Repository - Camada reposável pelo acesso direto ao banco de dados.
+@Repository - Camada responsável pelo acesso direto ao banco de dados.
 
-@Service - Nessa camada intermediária é implementada a maioria as regras de negócio da aplicação. A partir dela acessamos a cada de repositórios.  
+@Service - Nessa camada intermediária é implementada a maioria as regras de negócio da aplicação. A partir dela acessamos a camada de repositórios.  
 
 @Controller - Essa camada possui todos os end-points da API Rest, ela é a camada de acesso primária e a partir dela temos acesso a camada de serviços. 
  
