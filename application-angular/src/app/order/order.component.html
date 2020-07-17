@@ -1,0 +1,12 @@
+<div>
+    <h3>Adicionar Item no Pedido</h3>
+  </div>
+  <form class="example-container" [formGroup]="orderForm" (ngSubmit)="addOrder(orderForm.value)">
+    <mat-form-field>
+      <input matInput name="idProduct" placeholder="Codigo do Produto" formControlName="idProduct">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  matInput name="idCart" placeholder="Codigo do Pedido" formControlName="idCart"></textarea>
+    </mat-form-field>
+    <button type="submit" [disabled]="!orderForm.valid" mat-button color="primary" >Adicionar</button>
+  </form>

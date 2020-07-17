@@ -1,0 +1,16 @@
+<div>
+    <h3>Adicionar Novo Cliente</h3>
+  </div>
+  <form class="example-container" [formGroup]="userForm" (ngSubmit)="addUser(userForm.value)">
+    <mat-form-field>
+      <input matInput name="name" placeholder="Nome do Cliente" formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  matInput name="mail" placeholder="E-mail do Cliente" formControlName="mail"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="address" placeholder="Endereço do Cliente" formControlName="address">
+    </mat-form-field>
+  
+    <button type="submit" [disabled]="!userForm.valid" mat-button color="primary" >Adicionar</button>
+  </form>

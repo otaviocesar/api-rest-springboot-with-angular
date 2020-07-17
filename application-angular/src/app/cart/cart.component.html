@@ -1,0 +1,9 @@
+<div>
+    <h3>Novo Pedido</h3>
+  </div>
+  <form class="example-container" [formGroup]="cartForm" (ngSubmit)="addCart(cartForm.value)">
+    <mat-form-field>
+      <input matInput name="idUser" placeholder="Codigo do Usuário" formControlName="idUser">
+    </mat-form-field>
+    <button type="submit" [disabled]="!cartForm.valid" mat-button color="primary" >Adicionar</button>
+  </form>

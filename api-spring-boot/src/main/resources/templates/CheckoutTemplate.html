@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.ddiv">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+.full-width {
+	margin: 0 auto;
+	align-content: center;
+}
+
+.borda {
+	margin: 0 auto;
+	align-content: center;
+}
+
+.brasao {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.text-center {
+	text-align: center;
+}
+</style>
+<title></title>
+</head>
+<body>
+	<div class="full-width">
+		<div>
+			<a> <img style="width:100%"
+				src="https://github.com/otaviocesar/sistemas-distribuidos-2020-3/blob/master/images/obrigado.png?raw=true"
+				alt="Confirmação de Entrega" />
+			</a>
+		</div>
+		<div>
+			<h3 style="color: #333333;"
+				th:text="${'Olá, obrigado por efetuar sua compra conosco!'}">
+
+			</h3>
+
+		</div>
+		<div>
+			<a> <img
+				src="https://github.com/otaviocesar/sistemas-distribuidos-2020-3/blob/master/images/order.png?raw=true"
+				alt="confirmacao" width="20" /><strong> <span
+					th:text="${' ' + subject}" style="font-family: arial;"></span>
+			</strong>
+			</a>
+		</div>
+		<div>
+			<a> <img
+				src="https://github.com/otaviocesar/sistemas-distribuidos-2020-3/blob/master/images/hastag.png?raw=true"
+				alt="confirmar-compra-detalhes" width="20" /><strong><span
+					style="font-family: arial;"> Detalhes: </span></strong>
+			</a>
+		</div>
+		<div>
+			<p style="font-size: 16px; color: #777777;" th:text="${emailContent}"></p>
+
+		</div>
+		<div class="full-width">
+			<div class="borda"
+				style="border-bottom: 10px solid #5271ff; background-color: #1b9ba3;"></div>
+		</div>
+	</div>
+	<div class="text-center">
+		<p style="color: #777777;">© 2020 - OTAVIO C C SANTOS | UNIVERSIDADE FEDERAL DO MARANHÃO.</p>
+	</div>
+</body>
+</html>

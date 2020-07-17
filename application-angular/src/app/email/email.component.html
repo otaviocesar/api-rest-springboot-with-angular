@@ -1,0 +1,24 @@
+<div>
+    <h3>Enviar E-mail para o Cliente</h3>
+  </div>
+  <form class="example-container" [formGroup]="emailForm" (ngSubmit)="addEmail(emailForm.value)">
+    <mat-form-field>
+      <input matInput name="idSender" placeholder="Codigo do Remetente" formControlName="idSender">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  matInput name="idTemplate" placeholder="Codigo: 1-Recebido, 2-Confirmado, 3-Obrigado" formControlName="idTemplate"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea  matInput name="date" placeholder="Data" formControlName="date"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea  matInput name="schedule" placeholder="Agendamento" formControlName="schedule"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea  matInput name="name" placeholder="Assunto do E-mail" formControlName="name"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea  matInput name="value" placeholder="Texto do E-mail" formControlName="value"></textarea>
+      </mat-form-field>
+    <button type="submit" [disabled]="!emailForm.valid" mat-button color="primary" >Adicionar</button>
+  </form>
